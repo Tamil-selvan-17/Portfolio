@@ -1,9 +1,7 @@
 // tailwind.config.js
-/** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: 'class', // or 'media' or 'selector'
+module.exports = {
   content: [
-    "./src/**/*.{html,ts}",
+    './src/**/*.{html,ts}', // <-- required to scan Angular templates and TS
   ],
   theme: {
     extend: {},
