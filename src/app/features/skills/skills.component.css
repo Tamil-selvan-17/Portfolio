@@ -1,0 +1,41 @@
+/* ---------- FILTER CHIPS ---------- */
+.chip {
+  @apply px-5 py-1.5 rounded-full border border-transparent transition-all
+          text-gray-700 dark:text-gray-200 bg-white/10 backdrop-blur-md;
+}
+.chip.active-chip {
+  background: linear-gradient(90deg,#000428,#004e92);
+  color: #fff;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 35%);
+}
+.chip:hover:not(.active-chip) {
+  border-color:#4f46e5;
+  transform: translateY(-2px) scale(1.05);
+}
+
+
+/* Skill Card Style */
+.skill-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 0.375rem; /* square-ish */
+}
+.dark .skill-card {
+  background: #1f2937;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* Fall down animation */
+@keyframes fall-down {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.animate-fall-down {
+  animation: fall-down 0.6s ease forwards;
+}

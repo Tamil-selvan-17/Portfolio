@@ -1,0 +1,62 @@
+<!-- About Page -->
+<div
+  id="aboutpage"
+  class="w-screen min-h-screen font-sans px-4 md:px-10 py-12 overflow-x-hidden text-gray-800 dark:text-white"
+>
+  <div
+    class="flex flex-col lg:flex-row items-center gap-12 w-full animate-fade-in"
+  >
+    <!-- Left: Transparent Background Image -->
+    <div class="w-full lg:w-1/2 flex justify-center">
+      <img
+        [src]="imageUrl"
+        alt="Tamil Selvan"
+        class="w-[85%] h-auto object-contain drop-shadow-2xl backdrop-blur-md transition-transform duration-300 hover:scale-105"
+      />
+    </div>
+
+    <!-- Right: Bio -->
+    <div class="w-full lg:w-1/2 space-y-6 animate-slide-in-right">
+      <div>
+        <h1 class="text-5xl font-bold text-indigo-700 mb-2">{{ heading }}</h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300">{{ subtitle }}</p>
+      </div>
+
+      <div class="space-y-4">
+        <p
+          *ngIf="bioParagraphs.length > 0"
+          class="text-base leading-relaxed text-gray-700 dark:text-gray-300 text-justify"
+          [innerHTML]="bioParagraphs[0]"
+        ></p>
+        <p
+          *ngIf="bioParagraphs.length > 1"
+          class="text-base leading-relaxed text-gray-700 dark:text-gray-300 text-justify"
+          [innerHTML]="bioParagraphs[1]"
+        ></p>
+        <p
+          *ngIf="bioParagraphs.length > 2"
+          class="text-base leading-relaxed text-gray-700 dark:text-gray-300 text-justify"
+          [innerHTML]="bioParagraphs[2]"
+        ></p>
+      </div>
+
+      <!-- Resume Buttons -->
+      <div class="flex gap-4 pt-4 flex-wrap">
+        <a
+          [href]="resumeUrl"
+          target="_blank"
+          class="px-6 py-2 bg-[#4f46e5] text-white font-medium rounded-xl shadow-md hover:bg-[#4338ca] transition-all duration-300"
+        >
+          View Resume
+        </a>
+        <a
+          [href]="resumeUrl"
+          download
+          class="px-6 py-2 border border-[#4f46e5] text-[#4f46e5] font-medium rounded-xl bg-transparent hover:bg-[#4f46e510] hover:text-[#4338ca] transition-all duration-300"
+        >
+          Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

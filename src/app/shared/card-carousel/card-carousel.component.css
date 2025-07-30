@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.custom-scroll-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.custom-scroll-hide::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,292 @@
+{
+  "ProjectName": "Portfolio",
+
+  "LogoImage": "assets/Images/Icon1.jpg",
+  "navItems": ["home", "about", "skills", "experience", "projects", "contact"],
+  "musicPlaylist": [
+    "assets/music/brookyohoho.mp3",
+    "assets/music/Despacito_Marimba.mp3",
+    "assets/music/Despacito_Remix.mp3",
+    "assets/music/drums_of_liberation.mp3",
+    "assets/music/luffy.mp3"
+  ],
+
+  "fullName": "Tamil Selvan",
+  "title": "Full Stack Developer | Angular | .NET Core | SQL",
+  "description": "Passionate about building dynamic and scalable web applications using Angular and .NET technologies. Experienced in crafting responsive UIs and backend services with clean architecture and performance in mind.",
+  "email": "tomgeorge2022@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/tamil-selvan-7200206323-full-stack-developer/",
+  "profileImage": "assets/Images/Tamil.jpg",
+
+  "imageUrl": "assets/Images/image14.png",
+  "heading": "About Me",
+  "subtitle": "Creative Full Stack Developer",
+  "bioParagraphs": [
+    "I'm <strong>Tamil Selvan</strong>, an Associate Software Engineer with over 2 years of experience building intuitive, scalable, and performance-driven web applications. I specialize in Angular for front-end development and .NET Core for back-end services, crafting seamless digital solutions from end to end.",
+    "I thrive in agile environments, contributing to projects with a sharp eye for UI/UX, problem-solving, and code optimization. My expertise includes designing RESTful APIs, managing SQL Server databases, and developing tools like XML-based editors, automated PDF trackers, and SLA-driven service portals.",
+    "Beyond the code, I value collaboration, precision, and clarity-ensuring every product I build delivers real-world impact and user satisfaction."
+  ],
+  "resumeUrl": "assets/Files/Tamilselvan_Resume.pdf",
+
+  "experiencetitle": "My Journey",
+  "experienceSubtitle": "A timeline of my educational background and professional experience.",
+  "skilltitle": "Technical Skills",
+  "skillsubtitle": "Technologies and frameworks I work with",
+  "Contacttitle": "Get in touch",
+  "Contactsubtitle": "Contact",
+  "github": "https://github.com/Tamil-selvan-17/Tamil-selvan-17",
+  "twitter": "https://twitter.com/yourprofile",
+  "instagram": "https://instagram.com/yourprofile",
+  "address": "Porur, Chennai",
+  "phone": "+91 7200206323",
+  "selectedTimezone": "Asia/Kolkata",
+  "SatelliteMapAd": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.238427443348!2d80.1509374!3d13.0474896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52610e5f5ee3c5%3A0x759046a2da0beb5a!2sOm%20Shakthi%20Nagar%2C%2014%2C%20Vivekananda%20Nagar%2C%20Vanagaram%2C%20Thoraipakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600095!5e0!3m2!1sen!2sin!4v1721470870269!5m2!1sen!2sin&maptype=satellite",
+  "ProjectTitle": "Projects",
+  "ProjectSubTitle": " A showcase of my recent work, highlighting the technologies and tools I’ve used to build impactful solutions.",
+
+  "filters": [
+    "All",
+    "Frontend",
+    "Backend",
+    "Programming Languages",
+    "Databases",
+    "Cloud & DevOps",
+    "Testing & Tools",
+    "Tools & Platforms"
+  ],
+  "skills": [
+    {
+      "name": "Angular",
+      "icon": "https://img.icons8.com/color/48/angularjs.png",
+      "category": "Frontend"
+    },
+    {
+      "name": "HTML5",
+      "icon": "https://img.icons8.com/color/48/html-5.png",
+      "category": "Frontend"
+    },
+    {
+      "name": "CSS3",
+      "icon": "https://img.icons8.com/color/48/css3.png",
+      "category": "Frontend"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "https://img.icons8.com/color/48/javascript.png",
+      "category": "Frontend"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "https://img.icons8.com/color/48/javascript.png",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "https://img.icons8.com/color/48/typescript.png",
+      "category": "Frontend"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "https://img.icons8.com/color/48/typescript.png",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "jQuery",
+      "icon": "https://img.icons8.com/ios-filled/50/jquery.png",
+      "category": "Frontend"
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "https://img.icons8.com/color/48/bootstrap.png",
+      "category": "Frontend"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "https://img.icons8.com/color/48/tailwindcss.png",
+      "category": "Frontend"
+    },
+    {
+      "name": ".NET Core (C#)",
+      "icon": "https://img.icons8.com/color/48/net-framework.png",
+      "category": "Backend"
+    },
+    {
+      "name": ".NET Core (C#)",
+      "icon": "https://img.icons8.com/color/48/net-framework.png",
+      "category": "Programming Languages"
+    },
+    {
+      "name": "ASP.NET MVC",
+      "icon": "https://img.icons8.com/color/48/asp.png",
+      "category": "Backend"
+    },
+    {
+      "name": "Web API",
+      "icon": "https://img.icons8.com/fluency/48/api.png",
+      "category": "Backend"
+    },
+    {
+      "name": "JWT Authentication",
+      "icon": "https://img.icons8.com/ios-filled/50/security-checked.png",
+      "category": "Backend"
+    },
+    {
+      "name": "SQL Server",
+      "icon": "https://img.icons8.com/color/48/microsoft-sql-server.png",
+      "category": "Databases"
+    },
+    {
+      "name": "AWS S3",
+      "icon": "https://img.icons8.com/color/48/amazon-s3.png",
+      "category": "Cloud & DevOps"
+    },
+    {
+      "name": "CI/CD",
+      "icon": "https://img.icons8.com/external-flat-juicy-fish/60/external-ci-cd-devops-flat-flat-juicy-fish.png",
+      "category": "Cloud & DevOps"
+    },
+    {
+      "name": "Postman",
+      "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png",
+      "category": "Testing & Tools"
+    },
+    {
+      "name": "Swagger",
+      "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+      "category": "Testing & Tools"
+    },
+    {
+      "name": "Git",
+      "icon": "https://img.icons8.com/color/48/git.png",
+      "category": "Tools & Platforms"
+    },
+    {
+      "name": "Agile Development",
+      "icon": "https://cdn-icons-png.flaticon.com/512/3843/3843943.png",
+      "category": "Tools & Platforms"
+    },
+    {
+      "name": "Code Reviews",
+      "icon": "https://cdn-icons-png.flaticon.com/512/1040/1040230.png",
+      "category": "Tools & Platforms"
+    }
+  ],
+  "education": [
+    {
+      "label": "Education",
+      "date": "2019 – 2023",
+      "title": "B.E. Computer Science",
+      "description": "Karpagam Institute of Technology, Coimbatore"
+    },
+    {
+      "label": "HSC",
+      "date": "2018 – 2019",
+      "title": "Higher Secondary Education",
+      "description": "Mahatma Montessori Matriculation Hr. Sec. School, Madurai"
+    },
+    {
+      "label": "SSLC",
+      "date": "2016 – 2017",
+      "title": "Secondary School Education",
+      "description": "Mahatma Montessori Matriculation Hr. Sec. School, Madurai"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Nova Techset",
+      "location": "Chennai, India",
+      "roles": [
+        {
+          "role": "Associate Software Engineer",
+          "date": "Sep 2024 – Present",
+          "description": "As an Associate Software Engineer, I focus on building and maintaining scalable web applications using Angular, .NET Core, and SQL Server. I’ve worked on improving performance and maintainability by refining system architecture and optimizing core logic—leading to a 15% increase in efficiency. By enhancing the front-end experience, I also helped reduce UI load times by 20%, making the applications faster and more responsive. I regularly participate in debugging, code reviews, and QA testing, which has helped minimize post-release bugs and maintain a consistent 99.9% application uptime."
+        },
+        {
+          "role": "Junior Software Engineer",
+          "date": "Mar 2023 – Aug 2024",
+          "description": "As a Junior Software Engineer, I took on a more hands-on role working on both front-end and back-end components using Angular, .NET Core, and SQL Server. I collaborated with cross-functional teams to develop new features, enhance existing ones, and ensure seamless application performance. I also contributed to code reviews and testing, which helped identify issues early and improved system stability and reliability."
+        },
+        {
+          "role": "Trainee Software Engineer",
+          "date": "Jun 2022 – Feb 2023",
+          "description": "As a Trainee Software Engineer, I gained practical experience in full-stack development and the end-to-end software development lifecycle. I actively collaborated with senior developers in designing application modules, resolving UI-level defects, and improving code quality through structured guidance and review."
+        }
+      ]
+    }
+  ],
+  "project": [
+    {
+      "name": "NEDIT – XML Editor Tool",
+      "company": "Nova Techset",
+      "period": "Jun 2024 – Present",
+      "bullets": [
+        "Led development of real‑time XML editor",
+        "One‑click PDF creation & workflow automation",
+        "Auto‑tracked author corrections",
+        "Cut manual effort by 40 %",
+        "Led development of real‑time XML editor",
+        "One‑click PDF creation & workflow automation",
+        "Auto‑tracked author corrections",
+        "Led development of real‑time XML editor"
+      ],
+      "stack": [
+        {
+          "name": "Angular",
+          "icon": "https://img.icons8.com/color/48/angularjs.png"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "https://img.icons8.com/color/48/typescript.png"
+        },
+        {
+          "name": ".NET Core",
+          "icon": "https://img.icons8.com/color/48/net-framework.png"
+        }
+      ],
+      "image": "assets/Images/image2.jpg",
+      "github": "https://github.com/Tamil-selvan-17/Tamil-selvan-17",
+      "live": "t"
+    },
+    {
+      "name": "SESAME – PDF Tracking System",
+      "company": "Nova Techset",
+      "period": "Mar 2023 – May 2024",
+      "bullets": [
+        "Auto‑tracked author corrections",
+        "Cut manual effort by 40 %"
+      ],
+      "stack": [
+        {
+          "name": "Angular",
+          "icon": "https://img.icons8.com/color/48/angularjs.png"
+        },
+        {
+          "name": ".NET Core",
+          "icon": "https://img.icons8.com/color/48/net-framework.png"
+        },
+        {
+          "name": "SQL Server",
+          "icon": "https://img.icons8.com/ios-filled/50/sql.png"
+        }
+      ],
+      "image": "assets/Images/image3.jpg"
+    },
+    {
+      "name": "NTRAC – SLA Service Portal",
+      "company": "Nova Techset",
+      "period": "Jun 2022 – Feb 2023",
+      "bullets": ["Realtime SLA dashboards", "Improved resolution by 25 %"],
+      "stack": [
+        {
+          "name": "ASP.NET MVC",
+          "icon": "https://img.icons8.com/color/48/net-framework.png"
+        },
+        {
+          "name": "SQL Server",
+          "icon": "https://img.icons8.com/ios-filled/50/sql.png"
+        }
+      ],
+      "image": "assets/Images/image4.jpg"
+    }
+  ]
+}

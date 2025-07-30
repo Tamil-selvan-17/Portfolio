@@ -1,0 +1,148 @@
+<div
+  class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xl"
+>
+  <!-- 📌 Left: Contact Info & Map -->
+  <div class="space-y-6">
+    <!-- Address -->
+    <div class="flex items-center gap-3 mb-3">
+      <div
+        class="bg-gradient-to-br from-emerald-300 to-emerald-500 text-white p-2 rounded-lg shadow-md"
+      >
+        <i class="fas fa-map-marker-alt"></i>
+      </div>
+      <div class="text-sm text-gray-700 dark:text-gray-300">
+        <strong>Address:</strong> {{ address }}
+      </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="flex items-center gap-3 mb-3">
+      <div
+        class="bg-gradient-to-br from-blue-300 to-blue-500 text-white p-2 rounded-lg shadow-md"
+      >
+        <i class="fas fa-phone-alt"></i>
+      </div>
+      <div
+        class="text-sm text-gray-700 dark:text-gray-300 flex items-center gap-2"
+      >
+        <strong>Call Us:</strong> {{ phone }}
+        <i
+          class="fas fa-copy cursor-pointer text-gray-500 hover:text-blue-600"
+          (click)="copyToClipboard(phone)"
+          title="Copy"
+        ></i>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="flex items-center gap-3 mb-3">
+      <div
+        class="bg-gradient-to-br from-purple-300 to-purple-500 text-white p-2 rounded-lg shadow-md"
+      >
+        <i class="fas fa-envelope"></i>
+      </div>
+      <div
+        class="text-sm text-gray-700 dark:text-gray-300 flex items-center gap-2"
+      >
+        <strong>Email:</strong> {{ email }}
+        <i
+          class="fas fa-copy cursor-pointer text-gray-500 hover:text-purple-600"
+          (click)="copyToClipboard(email)"
+          title="Copy"
+        ></i>
+      </div>
+    </div>
+
+    <!-- Satellite Map -->
+    <div>
+      <iframe
+        class="rounded-lg w-full h-52 border-0"
+        [src]="SatelliteMapAd | safeUrl"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+  </div>
+
+  <!-- ✉️ Right: Contact Form -->
+  <form
+    #contactForm="ngForm"
+    (ngSubmit)="sendEmail(contactForm)"
+    novalidate
+    class="space-y-4"
+  >
+    <!-- Name Field -->
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="formData.name"
+      required
+      placeholder="Your Name"
+      class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+    />
+
+    <!-- Email Field with Validation -->
+    <div>
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="formData.email"
+        required
+        email
+        #emailRef="ngModel"
+        placeholder="Your Email"
+        class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+      />
+
+      <!-- Error Message -->
+      <div
+        *ngIf="emailRef.invalid && emailRef.touched"
+        class="text-sm text-red-500 mt-1"
+      >
+        <span *ngIf="emailRef.errors?.['required']">Email is required.</span>
+        <span *ngIf="emailRef.errors?.['email']"
+          >Enter a valid email address.</span
+        >
+      </div>
+    </div>
+
+    <!-- Subject Field -->
+    <input
+      type="text"
+      name="subject"
+      [(ngModel)]="formData.subject"
+      required
+      placeholder="Subject"
+      class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+    />
+
+    <!-- Message Field -->
+    <textarea
+      name="message"
+      [(ngModel)]="formData.message"
+      rows="5"
+      required
+      placeholder="Message"
+      class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+    ></textarea>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      [disabled]="contactForm.invalid"
+      class="relative group w-full px-6 py-2 text-center font-medium rounded-xl border border-blue-600 text-blue-700 bg-white dark:bg-transparent dark:text-blue-400 transition-all duration-300 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      <span
+        class="relative z-10 group-hover:text-white group-disabled:text-blue-700 dark:group-disabled:text-blue-400"
+      >
+        Send Message
+      </span>
+      <span
+        class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"
+      >
+      </span>
+    </button>
+  </form>
+</div>

@@ -1,0 +1,46 @@
+<footer
+  class="w-full px-6 py-6 mt-12 border-t border-white/30 bg-white/60 dark:bg-black/30 backdrop-blur-md"
+>
+  <div
+    class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between text-center text-gray-700 dark:text-gray-300 text-sm"
+  >
+    <div class="mb-3 md:mb-0">
+      © {{ currentYear }}
+      <span class="font-semibold text-indigo-600 dark:text-indigo-400">{{
+        name
+      }}</span
+      >. All rights reserved.
+    </div>
+    <div class="flex space-x-4">
+      <a
+        [href]="github"
+        target="_blank"
+        rel="noopener"
+        class="hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+      >
+        <i class="fab fa-github text-lg"></i>
+      </a>
+      <a
+        [href]="linkedin"
+        target="_blank"
+        rel="noopener"
+        class="hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+      >
+        <i class="fab fa-linkedin text-lg"></i>
+      </a>
+      <a
+        [href]="instagram"
+        target="_blank"
+        class="hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+      >
+        <i class="fab fa-instagram text-lg"></i>
+      </a>
+      <a
+        [href]="'mailto:' + email"
+        class="hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+      >
+        <i class="fas fa-envelope text-lg"></i>
+      </a>
+    </div>
+  </div>
+</footer>
