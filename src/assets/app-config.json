@@ -22,7 +22,7 @@
   "heading": "About Me",
   "subtitle": "Creative Full Stack Developer",
   "bioParagraphs": [
-    "I'm <strong>Tamil Selvan</strong>, an Associate Software Engineer with over 2 years of experience building intuitive, scalable, and performance-driven web applications. I specialize in Angular for front-end development and .NET Core for back-end services, crafting seamless digital solutions from end to end.",
+    "I'm <strong>Tamil Selvan</strong>, an Associate Software Engineer with over 3+ years of experience building intuitive, scalable, and performance-driven web applications. I specialize in Angular for front-end development and .NET Core for back-end services, crafting seamless digital solutions from end to end.",
     "I thrive in agile environments, contributing to projects with a sharp eye for UI/UX, problem-solving, and code optimization. My expertise includes designing RESTful APIs, managing SQL Server databases, and developing tools like XML-based editors, automated PDF trackers, and SLA-driven service portals.",
     "Beyond the code, I value collaboration, precision, and clarity-ensuring every product I build delivers real-world impact and user satisfaction."
   ],
@@ -174,21 +174,21 @@
   "education": [
     {
       "label": "Education",
-      "date": "2019 – 2023",
-      "title": "B.E. Computer Science",
-      "description": "Karpagam Institute of Technology, Coimbatore"
+      "date": "2017 – 2021",
+      "title": "B.E. Computer Science and Engineering",
+      "description": "Alpha College of Engineering, Chennai"
     },
     {
       "label": "HSC",
-      "date": "2018 – 2019",
+      "date": "2016 – 2017",
       "title": "Higher Secondary Education",
-      "description": "Mahatma Montessori Matriculation Hr. Sec. School, Madurai"
+      "description": "Govt (B) HR SEC School, Porur, Chennai"
     },
     {
       "label": "SSLC",
-      "date": "2016 – 2017",
+      "date": "2014 – 2015",
       "title": "Secondary School Education",
-      "description": "Mahatma Montessori Matriculation Hr. Sec. School, Madurai"
+      "description": "Govt High School, Alapakkam, chennai"
     }
   ],
   "experience": [
