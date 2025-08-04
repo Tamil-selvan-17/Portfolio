@@ -6,11 +6,6 @@
     #track
     class="carousel-track flex transition-transform duration-700 ease-in-out"
     [style.transform]="getTranslateValue()"
-    (pointerdown)="onPointerDown($event)"
-    (pointermove)="onPointerMove($event)"
-    (pointerup)="onPointerUp($event)"
-    (mouseleave)="onPointerUp($event)"
-    (touchend)="onPointerUp($event)"
     (mouseenter)="stopAutoPlay()"
     (mouseleave)="startAutoPlay()"
   >
