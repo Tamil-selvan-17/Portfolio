@@ -9,9 +9,7 @@
   "musicPlaylist": [
     "assets/music/brookyohoho.mp3",
     "assets/music/Despacito_Marimba.mp3",
-    "assets/music/Despacito_Remix.mp3",
-    "assets/music/drums_of_liberation.mp3",
-    "assets/music/luffy.mp3"
+    "assets/music/drums_of_liberation.mp3"
   ],
 
   "fullName": "Tamil Selvan",
@@ -219,6 +217,53 @@
   ],
   "project": [
     {
+      "name": "Sesame WMS – Article Workflow & Proofing Platform",
+      "company": "Nova Techset",
+      "period": "",
+      "bullets": [
+        "A web-based project and workflow management system designed to manage the complete lifecycle of academic journal articles.",
+        "Contributed to full CRUD development across all master pages including Journal, Publisher, Issue, User, Vendor, and Mail Template management.",
+        "Developed and integrated RESTful APIs for handling article data, workflow transitions, and system-wide operations.",
+        "Implemented secure file upload and download functionality using AWS S3, ensuring safe storage and retrieval of article proofs and related documents.",
+        "Integrated and tested APIs for various modules, ensuring consistent performance and adherence to business logic.",
+        "Participated in optimizing both frontend and backend layers using Angular 14 and C#.NET for a scalable, maintainable codebase.",
+        "Supported the implementation of dynamic, configurable workflows and PDF proofing for streamlined editorial collaboration."
+      ],
+      "stack": [
+        {
+          "name": "Angular 14",
+          "icon": "https://img.icons8.com/color/48/angularjs.png"
+        },
+        {
+          "name": "C#.NET",
+          "icon": "https://img.icons8.com/ios-filled/48/c-sharp.png"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "https://img.icons8.com/color/48/javascript.png"
+        },
+        {
+          "name": "Ajax",
+          "icon": "https://img.icons8.com/color/48/ajax.png"
+        },
+        {
+          "name": "jQuery",
+          "icon": "https://img.icons8.com/ios-filled/48/jquery.png"
+        },
+        {
+          "name": "AWS S3",
+          "icon": "https://img.icons8.com/color/48/amazon-web-services.png"
+        },
+        {
+          "name": "SQL Server 2018",
+          "icon": "https://img.icons8.com/color/48/microsoft-sql-server.png"
+        }
+      ],
+      "image": "assets/Images/image6.jpg",
+      "github": "",
+      "live": ""
+    },
+    {
       "name": "nEdit – Web-Based Academic Proofing Platform",
       "company": "Nova Techset",
       "period": "",
@@ -254,7 +299,7 @@
     },
     {
       "name": "Employee Profiling & Performance Dashboard",
-      "company": "Internal Tool",
+      "company": "Nova Techset",
       "period": "",
       "bullets": [
         "Built a comprehensive employee profiling system to monitor and display individual and team performance for leadership review (CEO, COO).",
@@ -296,7 +341,7 @@
     },
     {
       "name": "Vendor Management System (VMS)",
-      "company": "Internal Tool",
+      "company": "Nova Techset",
       "period": "",
       "bullets": [
         "Worked on a full-stack Vendor Management System to simplify vendor onboarding, payment handling, and document tracking.",
@@ -342,51 +387,6 @@
       "live": ""
     },
     {
-      "name": "Sesame WMS – Article Workflow & Proofing Platform",
-      "company": "Internal Tool",
-      "period": "",
-      "bullets": [
-        "Led the development of a web-based project management system for tracking and managing article workflows across publishing stages.",
-        "Enabled real-time visibility into the status of articles and issues, helping production managers easily monitor progress and meet due dates.",
-        "Integrated a PDF proofing system that allows authors to download, annotate, and re-upload corrected versions for approval.",
-        "Implemented dynamic workflows for articles and issues, configurable by admins for different journals and publishing processes.",
-        "Built features like article metadata editing, query management, and stage-wise activity tracking to streamline collaboration between authors, editors, and production teams.",
-        "Developed modules for Journal, Publisher, Issue, Mail Templates, User & Vendor Management, and comprehensive report generation.",
-        "Used AWS S3 for secure file storage and retrieval across different article lifecycle stages."
-      ],
-      "stack": [
-        {
-          "name": "Angular 14",
-          "icon": "https://img.icons8.com/color/48/angularjs.png"
-        },
-        {
-          "name": "C#.NET",
-          "icon": "https://img.icons8.com/ios-filled/48/c-sharp.png"
-        },
-        {
-          "name": "JavaScript",
-          "icon": "https://img.icons8.com/color/48/javascript.png"
-        },
-        { "name": "Ajax", "icon": "https://img.icons8.com/color/48/ajax.png" },
-        {
-          "name": "jQuery",
-          "icon": "https://img.icons8.com/ios-filled/48/jquery.png"
-        },
-        {
-          "name": "AWS S3",
-          "icon": "https://img.icons8.com/color/48/amazon-web-services.png"
-        },
-        {
-          "name": "SQL Server 2012",
-          "icon": "https://img.icons8.com/color/48/microsoft-sql-server.png"
-        }
-      ],
-      "image": "assets/Images/image6.jpg",
-      "github": "",
-      "live": "",
-      "role": "Team Lead"
-    },
-    {
       "name": "Personal Portfolio Website",
       "company": "Self Project",
       "period": "",
@@ -395,7 +395,7 @@
         "Built the entire site to be fully dynamic, loading content (projects, skills, socials) from a centralized JSON config file for easy updates.",
         "Implemented a working contact form integrated with EmailJS to send messages directly via email.",
         "Designed a clean, mobile-friendly UI using Tailwind CSS, with smooth scrolling, theme support, and interactive elements.",
-        "Deployed the site to [Hosting Platform, e.g., Netlify/Vercel] with continuous updates and optimizations."
+        "Deployed the site to Netlify with continuous updates and optimizations."
       ],
       "stack": [
         {

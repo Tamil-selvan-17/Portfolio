@@ -16,7 +16,7 @@
     </div>
 
     <!-- Phone -->
-    <div class="flex items-center gap-3 mb-3">
+    <div class="flex items-center gap-3 mb-3 relative">
       <div
         class="bg-gradient-to-br from-blue-300 to-blue-500 text-white p-2 rounded-lg shadow-md"
       >
@@ -28,28 +28,48 @@
         <strong>Call Us:</strong> {{ phone }}
         <i
           class="fas fa-copy cursor-pointer text-gray-500 hover:text-blue-600"
-          (click)="copyToClipboard(phone)"
+          (click)="copyToClipboard(phone, 'phone')"
           title="Copy"
         ></i>
+
+        <span
+          *ngIf="copiedField === 'phone'"
+          class="text-green-600 text-xs ml-2 animate-fade-in absolute right-0 top-1/2 -translate-y-1/2"
+        >
+          Copied!
+        </span>
       </div>
     </div>
 
     <!-- Email -->
-    <div class="flex items-center gap-3 mb-3">
-      <div
-        class="bg-gradient-to-br from-purple-300 to-purple-500 text-white p-2 rounded-lg shadow-md"
-      >
-        <i class="fas fa-envelope"></i>
+    <div class="relative mb-3">
+      <div class="flex items-center gap-3">
+        <!-- Icon -->
+        <div
+          class="bg-gradient-to-br from-purple-300 to-purple-500 text-white p-2 rounded-lg shadow-md"
+        >
+          <i class="fas fa-envelope"></i>
+        </div>
+
+        <!-- Text and Copy -->
+        <div
+          class="text-sm text-gray-700 dark:text-gray-300 flex items-center gap-2"
+        >
+          <strong>Email:</strong> {{ email }}
+          <i
+            class="fas fa-copy cursor-pointer text-gray-500 hover:text-purple-600"
+            (click)="copyToClipboard(email, 'email')"
+            title="Copy"
+          ></i>
+        </div>
       </div>
+
+      <!-- Copied Message -->
       <div
-        class="text-sm text-gray-700 dark:text-gray-300 flex items-center gap-2"
+        *ngIf="copiedField === 'email'"
+        class="absolute -top-2 right-0 text-green-600 text-xs px-2 py-1 rounded shadow animate-fade-in"
       >
-        <strong>Email:</strong> {{ email }}
-        <i
-          class="fas fa-copy cursor-pointer text-gray-500 hover:text-purple-600"
-          (click)="copyToClipboard(email)"
-          title="Copy"
-        ></i>
+        Copied!
       </div>
     </div>
 
@@ -67,65 +87,106 @@
 
   <!-- ✉️ Right: Contact Form -->
   <form
-    #contactForm="ngForm"
-    (ngSubmit)="sendEmail(contactForm)"
+    [formGroup]="contactForm"
+    (ngSubmit)="sendEmail()"
     novalidate
     class="space-y-4"
   >
-    <!-- Name Field -->
-    <input
-      type="text"
-      name="name"
-      [(ngModel)]="formData.name"
-      required
-      placeholder="Your Name"
-      class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
-    />
-
-    <!-- Email Field with Validation -->
+    <!-- Name -->
     <div>
       <input
-        type="email"
-        name="email"
-        [(ngModel)]="formData.email"
-        required
-        email
-        #emailRef="ngModel"
-        placeholder="Your Email"
-        class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+        type="text"
+        placeholder="Your Name"
+        formControlName="name"
+        class="w-full px-4 py-2 rounded-lg border"
+        [ngClass]="{
+          'border-red-500': f['name'].invalid && f['name'].touched,
+          'border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white': true
+        }"
       />
-
-      <!-- Error Message -->
       <div
-        *ngIf="emailRef.invalid && emailRef.touched"
+        *ngIf="f['name'].touched && f['name'].invalid"
         class="text-sm text-red-500 mt-1"
       >
-        <span *ngIf="emailRef.errors?.['required']">Email is required.</span>
-        <span *ngIf="emailRef.errors?.['email']"
-          >Enter a valid email address.</span
+        <span *ngIf="f['name'].errors?.['required']">Name is required.</span>
+        <span *ngIf="f['name'].errors?.['minlength']"
+          >Min 2 characters required.</span
         >
       </div>
     </div>
 
-    <!-- Subject Field -->
-    <input
-      type="text"
-      name="subject"
-      [(ngModel)]="formData.subject"
-      required
-      placeholder="Subject"
-      class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
-    />
+    <!-- Email -->
+    <div>
+      <input
+        type="email"
+        placeholder="Your Email"
+        formControlName="email"
+        class="w-full px-4 py-2 rounded-lg border"
+        [ngClass]="{
+          'border-red-500': f['email'].invalid && f['email'].touched,
+          'border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white': true
+        }"
+      />
+      <div
+        *ngIf="f['email'].touched && f['email'].invalid"
+        class="text-sm text-red-500 mt-1"
+      >
+        <span *ngIf="f['email'].errors?.['required']">Email is required.</span>
+        <span *ngIf="f['email'].errors?.['pattern']"
+          >Enter a valid email (e.g., {{ sampleemail }}).</span
+        >
+      </div>
+    </div>
 
-    <!-- Message Field -->
-    <textarea
-      name="message"
-      [(ngModel)]="formData.message"
-      rows="5"
-      required
-      placeholder="Message"
-      class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
-    ></textarea>
+    <!-- Subject -->
+    <div>
+      <input
+        type="text"
+        placeholder="Subject"
+        formControlName="subject"
+        class="w-full px-4 py-2 rounded-lg border"
+        [ngClass]="{
+          'border-red-500': f['subject'].invalid && f['subject'].touched,
+          'border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white': true
+        }"
+      />
+      <div
+        *ngIf="f['subject'].touched && f['subject'].invalid"
+        class="text-sm text-red-500 mt-1"
+      >
+        <span *ngIf="f['subject'].errors?.['required']"
+          >Subject is required.</span
+        >
+        <span *ngIf="f['subject'].errors?.['minlength']"
+          >Min 3 characters required.</span
+        >
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <textarea
+        rows="5"
+        placeholder="Message"
+        formControlName="message"
+        class="w-full px-4 py-2 rounded-lg border"
+        [ngClass]="{
+          'border-red-500': f['message'].invalid && f['message'].touched,
+          'border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white': true
+        }"
+      ></textarea>
+      <div
+        *ngIf="f['message'].touched && f['message'].invalid"
+        class="text-sm text-red-500 mt-1"
+      >
+        <span *ngIf="f['message'].errors?.['required']"
+          >Message is required.</span
+        >
+        <span *ngIf="f['message'].errors?.['minlength']"
+          >Min 10 characters required.</span
+        >
+      </div>
+    </div>
 
     <!-- Submit Button -->
     <button
@@ -140,8 +201,7 @@
       </span>
       <span
         class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"
-      >
-      </span>
+      ></span>
     </button>
   </form>
 </div>

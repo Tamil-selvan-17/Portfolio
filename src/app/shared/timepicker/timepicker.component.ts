@@ -180,7 +180,28 @@ export class TimepickerComponent {
       timezone: this.selectedTimezone,
       meetingType: 'Google Meet',
     };
+
     console.log(meetingDetails);
     this.bookCallEvent.emit(meetingDetails);
+
+    // Format date nicely
+    const formattedDate = new Intl.DateTimeFormat('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(new Date(meetingDetails.date));
+
+    // Show alert
+    const message = `✅ Thank you for booking!
+
+📅 Date: ${formattedDate}
+⏰ Time: ${meetingDetails.time}
+🌍 Timezone: ${meetingDetails.timezone}
+📞 Meeting Type: ${meetingDetails.meetingType}
+
+We’ll reach out to you soon.`;
+
+    alert(message);
   }
 }

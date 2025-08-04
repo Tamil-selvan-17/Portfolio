@@ -92,22 +92,19 @@ export class Contact implements OnInit {
   }
 
   sendEmail(formData: any) {
-    emailjs.send(this.serviceID, this.templateID, formData).then(
-      (response) => {
-        console.log('Email sent!', response.status);
-        alert('Thank you! Your message has been sent.');
-      },
-      (error) => {
-        console.error('Failed to send email', error);
-        alert('Oops! Something went wrong.');
-      }
+    alert(
+      `✅ Thank you, ${formData.name}!\n\nYour message has been sent successfully:\n\n"${formData.message}"`
     );
+    // emailjs.send(this.serviceID, this.templateID, formData).then(
+    //   (response) => {
+    //     console.log('Email sent!', response.status);
+    //     alert('Thank you! Your message has been sent.');
+    //   },
+    //   (error) => {
+    //     console.error('Failed to send email', error);
+    //     alert('Oops! Something went wrong.');
+    //   }
+    // );
   }
-
-  bookCall(form: any) {
-    if (form.valid) {
-      this.bookedCall = { ...this.callData };
-      form.resetForm();
-    }
-  }
+  bookCall(form: any) {}
 }

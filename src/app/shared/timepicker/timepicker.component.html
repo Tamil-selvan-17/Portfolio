@@ -1,20 +1,29 @@
 <!-- Full Width Container -->
-<div class="flex flex-col lg:flex-row w-full gap-8 p-6 bg-white dark:bg-black rounded-lg shadow-lg transition-all duration-300">
-
+<div
+  class="flex flex-col lg:flex-row w-full gap-8 p-6 bg-white dark:bg-black rounded-lg shadow-lg transition-all duration-300"
+>
   <!-- LEFT SECTION: Digital Transformation -->
   <div class="w-full lg:w-1/3 space-y-4 text-gray-900 dark:text-white">
     <!-- User Info -->
     <div class="flex items-center gap-3">
-      <img class="w-8 h-8 rounded-full border border-white dark:border-gray-800" src="assets/Images/Icon1.jpg" alt="User 1">
+      <img
+        class="w-8 h-8 rounded-full border border-white dark:border-gray-800"
+        src="assets/Images/Icon1.jpg"
+        alt="User 1"
+      />
       <h2 class="text-2xl font-bold">Tamil Selvan</h2>
     </div>
 
-    <div class="text-gray-500 dark:text-gray-400">{{ selectedDate | date: 'fullDate' }}</div>
+    <div class="text-gray-500 dark:text-gray-400">
+      {{ selectedDate | date : "fullDate" }}
+    </div>
 
     <!-- Timezone Dropdown -->
     <div class="relative w-full">
       <div class="relative">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <span
+          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+        >
           <img src="assets/Images/World1.svg" alt="World" class="w-5 h-5" />
         </span>
 
@@ -23,18 +32,25 @@
           name="timezone"
           [(ngModel)]="selectedTimezone"
           (change)="onTimezoneChange($event)"
-          class="block w-full appearance-none py-2.5 pl-10 pr-8 text-sm
-                 text-gray-900 bg-white dark:text-white dark:bg-gray-900
-                 border-0 border-b-2 border-gray-300 dark:border-gray-600
-                 focus:outline-none focus:ring-0 focus:border-gray-600 peer"
+          class="block w-full appearance-none py-2.5 pl-10 pr-8 text-sm text-gray-900 bg-white dark:text-white dark:bg-gray-900 border-0 border-b-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-gray-600 peer"
         >
           <option *ngFor="let tz of timezones" [value]="tz">{{ tz }}</option>
           <option value="" disabled>Select Timezone</option>
         </select>
 
-        <span class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-          <svg class="w-4 h-4 text-gray-500 dark:text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+        <span
+          class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none"
+        >
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-300"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"
+            />
           </svg>
         </span>
       </div>
@@ -50,7 +66,11 @@
     <div>
       <p class="text-gray-500 dark:text-gray-400 mb-1">Meeting Type</p>
       <div class="flex items-center gap-2 text-base font-medium">
-        <img src="assets/Images/googlemeet.svg" alt="Google Meet" class="w-5 h-5" />
+        <img
+          src="assets/Images/googlemeet.svg"
+          alt="Google Meet"
+          class="w-5 h-5"
+        />
         <span>Google Meet</span>
       </div>
     </div>
@@ -60,15 +80,31 @@
   <div class="w-full lg:w-1/3 flex flex-col items-center justify-center">
     <div class="w-full">
       <!-- Month Header -->
-      <div class="flex items-center justify-between text-gray-800 dark:text-white mb-2">
-        <button (click)="prevMonth()" class="px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">&#8592;</button>
-        <div class="font-medium">{{ currentDate | date: 'MMMM yyyy' }}</div>
-        <button (click)="nextMonth()" class="px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700">&#8594;</button>
+      <div
+        class="flex items-center justify-between text-gray-800 dark:text-white mb-2"
+      >
+        <button
+          (click)="prevMonth()"
+          class="px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+        >
+          &#8592;
+        </button>
+        <div class="font-medium">{{ currentDate | date : "MMMM yyyy" }}</div>
+        <button
+          (click)="nextMonth()"
+          class="px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+        >
+          &#8594;
+        </button>
       </div>
 
       <!-- Days of Week -->
-      <div class="grid grid-cols-7 text-center text-sm text-gray-600 dark:text-gray-400 mb-1">
-        <div *ngFor="let day of ['Su','Mo','Tu','We','Th','Fr','Sa']">{{ day }}</div>
+      <div
+        class="grid grid-cols-7 text-center text-sm text-gray-600 dark:text-gray-400 mb-1"
+      >
+        <div *ngFor="let day of ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']">
+          {{ day }}
+        </div>
       </div>
 
       <!-- Calendar Days -->
@@ -77,51 +113,63 @@
           <div></div>
         </ng-container>
         <ng-container *ngFor="let day of daysInMonth">
-  <button
-    (click)="selectDate(day)"
-    [disabled]="isPast(day)"
-    [ngClass]="{
-      'bg-blue-600 text-white': isSelected(day),
-      'text-gray-800 dark:text-white hover:bg-blue-100 dark:hover:bg-gray-700': !isSelected(day) && !isPast(day),
-      'text-gray-400 dark:text-gray-500 cursor-not-allowed': isPast(day)
-    }"
-    class="px-2 py-1 rounded transition-all"
-  >
-    {{ day }}
-  </button>
-</ng-container>
-
+          <button
+            (click)="selectDate(day)"
+            [disabled]="isPast(day)"
+            [ngClass]="{
+              'bg-blue-600 text-white': isSelected(day),
+              'text-gray-800 dark:text-white hover:bg-blue-100 dark:hover:bg-gray-700':
+                !isSelected(day) && !isPast(day),
+              'text-gray-400 dark:text-gray-500 cursor-not-allowed': isPast(day)
+            }"
+            class="px-2 py-1 rounded transition-all"
+          >
+            {{ day }}
+          </button>
+        </ng-container>
+        <!-- Under calendar -->
+        <div *ngIf="!selectedDate" class="text-red-500 text-sm mt-1">
+          Please select a date.
+        </div>
       </div>
     </div>
   </div>
 
   <!-- RIGHT SECTION: Time Slots -->
   <div class="w-full lg:w-1/3 flex flex-col">
-    <h3 class="text-gray-900 dark:text-white font-medium text-center mb-3">Pick a time</h3>
-    <div class="grid grid-cols-2 gap-2 overflow-y-auto pr-1 mb-4 hide-scrollbar max-h-52">
+    <h3 class="text-gray-900 dark:text-white font-medium text-center mb-3">
+      Pick a time
+    </h3>
+    <div
+      class="grid grid-cols-2 gap-2 overflow-y-auto pr-1 mb-4 hide-scrollbar max-h-52"
+    >
       <ng-container *ngFor="let time of timeSlots">
         <button
           (click)="onTimeSelect(time)"
           [ngClass]="{
             'bg-blue-600 text-white shadow-md': selectedTime === time,
-            'bg-white text-blue-700 border border-blue-600 dark:bg-gray-900 dark:text-blue-400 dark:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-600 hover:text-blue-800 dark:hover:text-white': selectedTime !== time
+            'bg-white text-blue-700 border border-blue-600 dark:bg-gray-900 dark:text-blue-400 dark:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-600 hover:text-blue-800 dark:hover:text-white':
+              selectedTime !== time
           }"
           class="rounded px-3 py-1.5 text-sm font-medium transition-all"
         >
           {{ time }}
         </button>
       </ng-container>
+      <!-- Under time slots -->
+      <div *ngIf="!selectedTime" class="text-red-500 text-sm mt-1">
+        Please select a time slot.
+      </div>
     </div>
 
     <button
       (click)="bookCall()"
-      class="w-full px-6 py-2 text-center font-medium rounded-xl border 
-             border-blue-600 text-blue-700 bg-white dark:bg-transparent dark:text-blue-400
-             hover:bg-blue-50 dark:hover:bg-blue-600 hover:text-blue-800 dark:hover:text-white
-             transition-all duration-300"
+      [disabled]="
+        !selectedDate || !selectedTime || isPast(selectedDate.getDate())
+      "
+      class="w-full px-6 py-2 text-center font-medium rounded-xl border border-blue-600 text-blue-700 bg-white dark:bg-transparent dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-600 hover:text-blue-800 dark:hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
     >
       Book Call
     </button>
   </div>
-
 </div>
