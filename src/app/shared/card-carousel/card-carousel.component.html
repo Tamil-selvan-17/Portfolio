@@ -3,31 +3,34 @@
   <div
     class="flex transition-transform duration-700 ease-in-out"
     [style.transform]="getTranslateValue()"
-    [style.width.%]="100"
     (mouseenter)="stopAutoPlay()"
     (mouseleave)="startAutoPlay()"
   >
-    <div *ngFor="let project of projects" class="w-full shrink-0 px-2 md:px-6">
+    <div
+      *ngFor="let project of projects"
+      class="w-full shrink-0 px-2 sm:px-4 md:px-6"
+    >
       <!-- Card -->
       <div
-        class="flex flex-col md:flex-row items-stretch h-full rounded-3xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 shadow-xl overflow-hidden transition-all"
+        class="flex flex-col md:flex-row rounded-3xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 shadow-xl overflow-hidden transition-all"
       >
-        <!-- Left: Image -->
+        <!-- Image Section -->
         <div class="w-full md:w-1/2">
           <img
             [src]="project.image"
             [alt]="project.name"
-            class="w-full h-full object-cover rounded-l-3xl"
+            class="w-full h-48 md:h-full object-cover"
           />
         </div>
 
-        <!-- Right: Content -->
+        <!-- Content Section -->
         <div
-          class="w-full md:w-1/2 p-4 sm:p-5 md:p-6 flex flex-col justify-between bg-white/30 dark:bg-white/5 backdrop-blur-md"
+          class="w-full md:w-1/2 flex flex-col justify-between p-4 bg-white/30 dark:bg-white/5"
         >
-          <div class="flex-grow">
+          <!-- Title & Company -->
+          <div class="flex flex-col">
             <h3
-              class="text-lg sm:text-xl md:text-2xl font-bold text-indigo-600 dark:text-indigo-400"
+              class="text-lg md:text-xl font-bold text-indigo-600 dark:text-indigo-400"
             >
               {{ project.name }}
             </h3>
@@ -37,8 +40,10 @@
             <p class="text-xs text-gray-400 dark:text-gray-400 mb-2">
               {{ project.period }}
             </p>
+
+            <!-- Description Bullets -->
             <ul
-              class="list-disc ml-5 mb-3 text-sm text-gray-800 dark:text-gray-200 max-h-40 overflow-y-auto custom-scroll-hide"
+              class="list-disc ml-5 mt-2 text-sm text-gray-800 dark:text-gray-200 max-h-[30vh] md:max-h-[40vh] overflow-y-auto pr-2 custom-scroll-hide"
             >
               <li *ngFor="let point of project.bullets">
                 {{ point }}
@@ -50,7 +55,7 @@
           <div class="flex flex-wrap gap-2 mt-3">
             <div
               *ngFor="let tech of project.stack"
-              class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium text-gray-800 dark:text-white bg-white/30 dark:bg-white/10 backdrop-blur-md border border-white/20 shadow-md hover:shadow-xl transition-transform transform hover:scale-105 duration-200"
+              class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium text-gray-800 dark:text-white bg-white/30 dark:bg-white/10 backdrop-blur-md border border-white/20 shadow-md hover:shadow-xl transition-transform hover:scale-105"
             >
               <img
                 [src]="tech.icon"
@@ -68,7 +73,7 @@
               [href]="project.github"
               target="_blank"
               rel="noopener"
-              class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-br from-gray-900 to-gray-700 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 backdrop-blur-md border border-white/10"
+              class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-br from-gray-900 to-gray-700 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all backdrop-blur-md border border-white/10"
             >
               <i class="fab fa-github mr-2"></i> GitHub
             </a>
@@ -77,7 +82,7 @@
               [href]="project.live"
               target="_blank"
               rel="noopener"
-              class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 backdrop-blur-md border border-white/10"
+              class="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all backdrop-blur-md border border-white/10"
             >
               <i class="fas fa-globe mr-2"></i> Live Demo
             </a>
@@ -106,6 +111,7 @@
       />
     </svg>
   </button>
+
   <button
     (click)="next()"
     class="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-gray-800 hover:bg-white dark:hover:bg-gray-700 p-2 rounded-full shadow-md backdrop-blur-md"

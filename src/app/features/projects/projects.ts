@@ -8,7 +8,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ApiService } from '../../core/services/apiservice/api.service';
-import { CardCarouselComponent } from '../../shared/card-carousel/card-carousel.component';
+import { ProjectCardCarousel } from '../../shared/project-card-carousel/project-card-carousel';
 interface Tech {
   name: string;
   icon: string; // image URL
@@ -24,7 +24,7 @@ interface Project {
 }
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, CardCarouselComponent],
+  imports: [CommonModule, ProjectCardCarousel],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })

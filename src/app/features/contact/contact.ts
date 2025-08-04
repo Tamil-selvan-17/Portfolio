@@ -1,10 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  inject,
+  OnInit,
+  ɵIMAGE_CONFIG_DEFAULTS,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../core/services/apiservice/api.service';
-import { ComponentFixtureAutoDetect } from '@angular/core/testing';
 import { ContactFormComponent } from '../../shared/contact-form/contact-form.component';
 import { TimepickerComponent } from '../../shared/timepicker/timepicker.component';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -49,10 +54,18 @@ export class Contact implements OnInit {
   bookedCall: any = null;
   selectedTimezone: any;
   fullName: any;
+  serviceID: string = '';
+  templateID: string = '';
+  publicKey: string = '';
 
   ngOnInit(): void {
+    emailjs.init(this.publicKey);
     this.apiService.getConfig().subscribe(
       (config) => {
+        this.serviceID = config.serviceID;
+        this.templateID = config.templateID;
+        this.publicKey = config.publicKey;
+
         this.title = config.Contacttitle;
         this.subtitle = config.Contactsubtitle;
         this.email = config.email;
@@ -78,11 +91,17 @@ export class Contact implements OnInit {
     });
   }
 
-  sendEmail(form: any) {
-    if (form.valid) {
-      console.log('Email Sent', this.formData);
-      form.resetForm();
-    }
+  sendEmail(formData: any) {
+    emailjs.send(this.serviceID, this.templateID, formData).then(
+      (response) => {
+        console.log('Email sent!', response.status);
+        alert('Thank you! Your message has been sent.');
+      },
+      (error) => {
+        console.error('Failed to send email', error);
+        alert('Oops! Something went wrong.');
+      }
+    );
   }
 
   bookCall(form: any) {

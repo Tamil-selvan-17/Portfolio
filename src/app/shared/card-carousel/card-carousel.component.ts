@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CardCarouselComponent implements OnInit, OnDestroy {
   @Input() projects: any[] = [];
-  @Input() interval = 4000; // autoplay interval (ms)
+  @Input() interval = 8000; // autoplay interval (ms)
 
   currentIndex = 0;
   autoPlayRef!: ReturnType<typeof setInterval>;
@@ -37,7 +37,8 @@ export class CardCarouselComponent implements OnInit, OnDestroy {
   }
 
   prev() {
-    this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
+    this.currentIndex =
+      (this.currentIndex - 1 + this.projects.length) % this.projects.length;
   }
 
   goTo(index: number) {

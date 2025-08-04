@@ -1,0 +1,158 @@
+<div
+  class="relative w-full max-w-7xl mx-auto overflow-hidden group touch-pan-y select-none"
+>
+  <!-- Carousel Track -->
+  <div
+    #track
+    class="carousel-track flex transition-transform duration-700 ease-in-out"
+    [style.transform]="getTranslateValue()"
+    (pointerdown)="onPointerDown($event)"
+    (pointermove)="onPointerMove($event)"
+    (pointerup)="onPointerUp($event)"
+    (mouseleave)="onPointerUp($event)"
+    (touchend)="onPointerUp($event)"
+    (mouseenter)="stopAutoPlay()"
+    (mouseleave)="startAutoPlay()"
+  >
+    <div
+      *ngFor="let project of projects; let i = index"
+      class="w-full shrink-0 px-2 flex justify-center relative"
+    >
+      <!-- Card -->
+      <!-- Card -->
+      <div
+        class="flex flex-col md:flex-row w-full max-w-[95vw] sm:max-w-2xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl bg-white/30 dark:bg-white/10 rounded-2xl border border-white/30 dark:border-white/20 shadow-xl backdrop-blur-md overflow-hidden group/card"
+      >
+        <!-- Image -->
+        <div class="w-full md:w-1/2">
+          <img
+            [src]="project.image"
+            [alt]="project.name"
+            class="w-full h-48 md:h-full object-cover"
+          />
+        </div>
+
+        <!-- Content -->
+        <div
+          class="w-full md:w-1/2 flex flex-col justify-between p-4 space-y-3 bg-white/40 dark:bg-white/5"
+        >
+          <!-- Info -->
+          <div>
+            <h3
+              class="text-lg sm:text-xl font-bold text-indigo-600 dark:text-indigo-400"
+            >
+              {{ project.name }}
+            </h3>
+            <p class="text-sm italic text-gray-600 dark:text-gray-300">
+              {{ project.company }}
+            </p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+              {{ project.period }}
+            </p>
+          </div>
+
+          <!-- Bullets -->
+          <div
+            class="max-h-40 sm:max-h-[35vh] overflow-y-auto pr-2 custom-scroll-hide"
+          >
+            <ul
+              class="list-disc ml-5 text-sm text-gray-800 dark:text-gray-200 space-y-1"
+            >
+              <li *ngFor="let point of project.bullets">{{ point }}</li>
+            </ul>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="flex flex-wrap gap-2">
+            <div
+              *ngFor="let tech of project.stack"
+              class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium text-gray-800 dark:text-white bg-white/30 dark:bg-white/10 backdrop-blur-md border border-white/20 shadow hover:shadow-md transition-transform hover:scale-105"
+            >
+              <img
+                [src]="tech.icon"
+                class="w-4 h-4 object-contain"
+                alt="{{ tech.name }}"
+              />
+              {{ tech.name }}
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-2">
+            <a
+              *ngIf="project.github"
+              [href]="project.github"
+              target="_blank"
+              class="px-4 py-1.5 text-sm font-medium text-white bg-gray-800 rounded-full shadow-md hover:scale-105 transition-all"
+            >
+              <i class="fab fa-github mr-2"></i> GitHub
+            </a>
+            <a
+              *ngIf="project.live"
+              [href]="project.live"
+              target="_blank"
+              class="px-4 py-1.5 text-sm font-medium text-white bg-indigo-600 rounded-full shadow-md hover:scale-105 transition-all"
+            >
+              <i class="fas fa-globe mr-2"></i> Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Prev Button -->
+        <button
+          (click)="prev()"
+          *ngIf="i === currentIndex"
+          class="hidden group-hover/card:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-gray-800 hover:bg-white dark:hover:bg-gray-700 p-2 rounded-full shadow-md backdrop-blur-md"
+        >
+          <svg
+            class="w-5 h-5 text-black dark:text-white"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        <!-- Next Button -->
+        <button
+          (click)="next()"
+          *ngIf="i === currentIndex"
+          class="hidden group-hover/card:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-gray-800 hover:bg-white dark:hover:bg-gray-700 p-2 rounded-full shadow-md backdrop-blur-md"
+        >
+          <svg
+            class="w-5 h-5 text-black dark:text-white"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="flex justify-center gap-2 mt-4">
+    <span
+      *ngFor="let project of projects; let i = index"
+      (click)="goTo(i)"
+      class="w-3 h-3 rounded-full transition-all duration-300 cursor-pointer"
+      [ngClass]="{
+        'bg-blue-600 dark:bg-blue-400 scale-110 shadow': i === currentIndex,
+        'bg-gray-300 dark:bg-gray-600': i !== currentIndex
+      }"
+    ></span>
+  </div>
+</div>

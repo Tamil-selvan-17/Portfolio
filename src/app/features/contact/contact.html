@@ -76,9 +76,9 @@
           type="button"
           class="px-5 py-2 text-sm sm:text-base font-medium transition-all duration-300 focus:outline-none"
           [ngClass]="{
-        'bg-blue-600 text-white dark:bg-blue-500': !isBookCall,
-        'bg-transparent text-gray-800 dark:text-white': isBookCall
-      }"
+            'bg-blue-600 text-white dark:bg-blue-500': !isBookCall,
+            'bg-transparent text-gray-800 dark:text-white': isBookCall
+          }"
           (click)="isBookCall = false"
         >
           Fill a Form
@@ -89,9 +89,9 @@
           type="button"
           class="px-5 py-2 text-sm sm:text-base font-medium transition-all duration-300 focus:outline-none"
           [ngClass]="{
-        'bg-blue-600 text-white dark:bg-blue-500': isBookCall,
-        'bg-transparent text-gray-800 dark:text-white': !isBookCall
-      }"
+            'bg-blue-600 text-white dark:bg-blue-500': isBookCall,
+            'bg-transparent text-gray-800 dark:text-white': !isBookCall
+          }"
           (click)="isBookCall = true"
         >
           Book a Call
@@ -105,6 +105,7 @@
       [email]="email"
       [phone]="phone"
       [SatelliteMapAd]="SatelliteMapAd"
+      (formSubmitted)="sendEmail($event)"
     ></app-contact-form>
   </div>
 

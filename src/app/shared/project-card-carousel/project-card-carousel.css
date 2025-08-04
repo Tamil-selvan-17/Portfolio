@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: 100%;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.custom-scroll-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.custom-scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track {
+  will-change: transform;
+  transition: transform 0.4s ease;
+}
+

@@ -1,5 +1,8 @@
 {
   "ProjectName": "Portfolio",
+  "serviceID": "service_804pw5g",
+  "templateID": "template_6kx96gf",
+  "publicKey": "DINhnP2aEc1wnAcCG",
 
   "LogoImage": "assets/Images/Icon1.jpg",
   "navItems": ["home", "about", "skills", "experience", "projects", "contact"],
@@ -216,18 +219,15 @@
   ],
   "project": [
     {
-      "name": "NEDIT – XML Editor Tool",
-      "company": "Nova Techset",
-      "period": "Jun 2024 – Present",
+      "name": "nEdit – Web-Based Academic Proofing Platform",
+      "company": "Nova Techset",
+      "period": "",
       "bullets": [
-        "Led development of real‑time XML editor",
-        "One‑click PDF creation & workflow automation",
-        "Auto‑tracked author corrections",
-        "Cut manual effort by 40 %",
-        "Led development of real‑time XML editor",
-        "One‑click PDF creation & workflow automation",
-        "Auto‑tracked author corrections",
-        "Led development of real‑time XML editor"
+        "Worked on nEdit, an online editing and proofing tool used by authors and editors to review and finalize academic journal content.",
+        "Built and improved features like image replacement, text formatting, footnotes, section/list creation, and Snapshot PDF downloads.",
+        "Helped enable real-time collaboration, allowing multiple users to edit and track changes together directly in the browser.",
+        "Integrated with backend systems using REST APIs to handle content saving, PDF generation, and proofing workflow updates.",
+        "Focused on creating a clean, responsive UI that supports math equations, reference editing, and live pagination, while maintaining XML structure compliance."
       ],
       "stack": [
         {
@@ -239,21 +239,29 @@
           "icon": "https://img.icons8.com/color/48/typescript.png"
         },
         {
-          "name": ".NET Core",
-          "icon": "https://img.icons8.com/color/48/net-framework.png"
+          "name": "HTML",
+          "icon": "https://img.icons8.com/color/48/html-5--v1.png"
+        },
+        { "name": "CSS", "icon": "https://img.icons8.com/color/48/css3.png" },
+        {
+          "name": "REST API",
+          "icon": "https://img.icons8.com/color/48/api.png"
         }
       ],
-      "image": "assets/Images/image2.jpg",
-      "github": "https://github.com/Tamil-selvan-17/Tamil-selvan-17",
-      "live": "t"
+      "image": "assets/Images/image1.jpg",
+      "github": "",
+      "live": ""
     },
     {
-      "name": "SESAME – PDF Tracking System",
-      "company": "Nova Techset",
-      "period": "Mar 2023 – May 2024",
+      "name": "Employee Profiling & Performance Dashboard",
+      "company": "Internal Tool",
+      "period": "",
       "bullets": [
-        "Auto‑tracked author corrections",
-        "Cut manual effort by 40 %"
+        "Built a comprehensive employee profiling system to monitor and display individual and team performance for leadership review (CEO, COO).",
+        "Used ng-apexcharts to create dynamic graphs and visualizations for productivity trends, comparisons, and KPI tracking.",
+        "Implemented features like Excel export, smart filters, and role-based dashboards to improve visibility and decision-making.",
+        "Integrated RESTful APIs and secured routes using JWT-based authentication to ensure safe and reliable data access.",
+        "Led the complete frontend development lifecycle, from UI/UX to deployment and production support."
       ],
       "stack": [
         {
@@ -261,32 +269,201 @@
           "icon": "https://img.icons8.com/color/48/angularjs.png"
         },
         {
+          "name": "TypeScript",
+          "icon": "https://img.icons8.com/color/48/typescript.png"
+        },
+        {
+          "name": "HTML",
+          "icon": "https://img.icons8.com/color/48/html-5--v1.png"
+        },
+        { "name": "CSS", "icon": "https://img.icons8.com/color/48/css3.png" },
+        {
+          "name": "ng-apexcharts",
+          "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-apexcharts-a-modern-charting-library-that-helps-developers-to-create-beautiful-visualizations-logo-color-tal-revivo.png"
+        },
+        {
+          "name": "REST API",
+          "icon": "https://img.icons8.com/color/48/api.png"
+        },
+        {
+          "name": "JWT Auth",
+          "icon": "https://img.icons8.com/color/48/lock--v1.png"
+        }
+      ],
+      "image": "assets/Images/image2.jpg",
+      "github": "",
+      "live": ""
+    },
+    {
+      "name": "Vendor Management System (VMS)",
+      "company": "Internal Tool",
+      "period": "",
+      "bullets": [
+        "Worked on a full-stack Vendor Management System to simplify vendor onboarding, payment handling, and document tracking.",
+        "Integrated the CCAvenue payment gateway to securely process vendor registration payments.",
+        "Built user-friendly, dynamic onboarding forms with validations and file upload to AWS S3, including progress tracking.",
+        "Developed tracking dashboards so admins could easily follow vendor onboarding progress and take necessary actions.",
+        "Handled file upload/download functionality, connecting the frontend with APIs and ensuring error handling worked smoothly.",
+        "Wrote and optimized SQL Stored Procedures to handle backend data operations cleanly and efficiently."
+      ],
+      "stack": [
+        {
+          "name": "Angular",
+          "icon": "https://img.icons8.com/color/48/angularjs.png"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "https://img.icons8.com/color/48/typescript.png"
+        },
+        {
+          "name": "Node.js",
+          "icon": "https://img.icons8.com/color/48/nodejs.png"
+        },
+        {
+          "name": ".NET",
+          "icon": "https://img.icons8.com/color/48/net-framework.png"
+        },
+        { "name": "SQL", "icon": "https://img.icons8.com/color/48/sql.png" },
+        {
+          "name": "AWS S3",
+          "icon": "https://img.icons8.com/color/48/amazon-web-services.png"
+        },
+        {
+          "name": "REST API",
+          "icon": "https://img.icons8.com/color/48/api.png"
+        },
+        {
+          "name": "CCAvenue",
+          "icon": "https://upload.wikimedia.org/wikipedia/en/thumb/6/64/CCAvenue_logo.svg/2560px-CCAvenue_logo.svg.png"
+        }
+      ],
+      "image": "assets/Images/image3.jpg",
+      "github": "",
+      "live": ""
+    },
+    {
+      "name": "Sesame WMS – Article Workflow & Proofing Platform",
+      "company": "Internal Tool",
+      "period": "",
+      "bullets": [
+        "Led the development of a web-based project management system for tracking and managing article workflows across publishing stages.",
+        "Enabled real-time visibility into the status of articles and issues, helping production managers easily monitor progress and meet due dates.",
+        "Integrated a PDF proofing system that allows authors to download, annotate, and re-upload corrected versions for approval.",
+        "Implemented dynamic workflows for articles and issues, configurable by admins for different journals and publishing processes.",
+        "Built features like article metadata editing, query management, and stage-wise activity tracking to streamline collaboration between authors, editors, and production teams.",
+        "Developed modules for Journal, Publisher, Issue, Mail Templates, User & Vendor Management, and comprehensive report generation.",
+        "Used AWS S3 for secure file storage and retrieval across different article lifecycle stages."
+      ],
+      "stack": [
+        {
+          "name": "Angular 14",
+          "icon": "https://img.icons8.com/color/48/angularjs.png"
+        },
+        {
+          "name": "C#.NET",
+          "icon": "https://img.icons8.com/ios-filled/48/c-sharp.png"
+        },
+        {
+          "name": "JavaScript",
+          "icon": "https://img.icons8.com/color/48/javascript.png"
+        },
+        { "name": "Ajax", "icon": "https://img.icons8.com/color/48/ajax.png" },
+        {
+          "name": "jQuery",
+          "icon": "https://img.icons8.com/ios-filled/48/jquery.png"
+        },
+        {
+          "name": "AWS S3",
+          "icon": "https://img.icons8.com/color/48/amazon-web-services.png"
+        },
+        {
+          "name": "SQL Server 2012",
+          "icon": "https://img.icons8.com/color/48/microsoft-sql-server.png"
+        }
+      ],
+      "image": "assets/Images/image6.jpg",
+      "github": "",
+      "live": "",
+      "role": "Team Lead"
+    },
+    {
+      "name": "Personal Portfolio Website",
+      "company": "Self Project",
+      "period": "",
+      "bullets": [
+        "Developed a modern, responsive portfolio website using Angular 20 to showcase skills, projects, and experience.",
+        "Built the entire site to be fully dynamic, loading content (projects, skills, socials) from a centralized JSON config file for easy updates.",
+        "Implemented a working contact form integrated with EmailJS to send messages directly via email.",
+        "Designed a clean, mobile-friendly UI using Tailwind CSS, with smooth scrolling, theme support, and interactive elements.",
+        "Deployed the site to [Hosting Platform, e.g., Netlify/Vercel] with continuous updates and optimizations."
+      ],
+      "stack": [
+        {
+          "name": "Angular 20",
+          "icon": "https://img.icons8.com/color/48/angularjs.png"
+        },
+        {
+          "name": "TypeScript",
+          "icon": "https://img.icons8.com/color/48/typescript.png"
+        },
+        {
+          "name": "Tailwind CSS",
+          "icon": "https://img.icons8.com/color/48/tailwindcss.png"
+        },
+        {
+          "name": "EmailJS",
+          "icon": "https://img.icons8.com/ios-filled/48/email.png"
+        },
+        {
+          "name": "JSON Config",
+          "icon": "https://img.icons8.com/ios-filled/48/code.png"
+        }
+      ],
+      "image": "assets/Images/image4.jpg",
+      "github": "https://github.com/Tamil-selvan-17/Portfolio",
+      "live": "https://portfolio-tamil-selvan.netlify.app/#/Portfolio"
+    },
+    {
+      "name": "GUIDE_COREAPI",
+      "company": "Self Project",
+      "period": "",
+      "bullets": [
+        "Built a scalable RESTful API using .NET Core Web API designed for managing guide data.",
+        "Implemented JWT-based authentication to secure API endpoints.",
+        "Designed modular architecture for easy maintenance and extensibility.",
+        "Integrated Entity Framework Core with SQL Server for robust data access.",
+        "Added Swagger for interactive API testing and documentation.",
+        "Supports CRUD operations for guides with input validation and error handling."
+      ],
+      "stack": [
+        {
           "name": ".NET Core",
           "icon": "https://img.icons8.com/color/48/net-framework.png"
         },
         {
-          "name": "SQL Server",
-          "icon": "https://img.icons8.com/ios-filled/50/sql.png"
-        }
-      ],
-      "image": "assets/Images/image3.jpg"
-    },
-    {
-      "name": "NTRAC – SLA Service Portal",
-      "company": "Nova Techset",
-      "period": "Jun 2022 – Feb 2023",
-      "bullets": ["Realtime SLA dashboards", "Improved resolution by 25 %"],
-      "stack": [
+          "name": "C#",
+          "icon": "https://img.icons8.com/ios-filled/48/c-sharp.png"
+        },
         {
-          "name": "ASP.NET MVC",
-          "icon": "https://img.icons8.com/color/48/net-framework.png"
+          "name": "Entity Framework Core",
+          "icon": "https://img.icons8.com/color/48/asp-net-core.png"
         },
         {
           "name": "SQL Server",
-          "icon": "https://img.icons8.com/ios-filled/50/sql.png"
+          "icon": "https://img.icons8.com/color/48/microsoft-sql-server.png"
+        },
+        {
+          "name": "Swagger",
+          "icon": "https://img.icons8.com/ios-filled/48/swagger.png"
+        },
+        {
+          "name": "JWT",
+          "icon": "https://img.icons8.com/color/48/lock--v1.png"
         }
       ],
-      "image": "assets/Images/image4.jpg"
+      "image": "assets/Images/image5.jpg",
+      "github": "https://github.com/Tamil-selvan-17/Guide_CoreAPI",
+      "live": ""
     }
   ]
 }
